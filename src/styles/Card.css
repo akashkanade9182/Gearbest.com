@@ -1,0 +1,75 @@
+
+
+  .producttitle{
+    display: -webkit-box;
+    -webkit-line-clamp:1;
+    -webkit-box-orient: vertical;  
+    overflow: hidden;
+    text-overflow: ellipsis;
+  
+
+  } 
+  .card {
+    position: relative;
+  }
+  
+  .fbtn {
+    
+   
+  
+    width: 25px;
+    height: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+   left: 80%;
+    cursor: pointer;
+  }
+  .buttonbox>div{
+    width: 90%;
+    margin: auto;
+    align-items: center;
+    margin-left: 0;
+    /* border:1px solid red */
+}
+.quantbox{
+    width: 50px;
+    font-size: 1.5rem;
+    display:flex;
+    justify-content: space-around;
+}
+.addcartbtn{
+    background-color:#2196f3;
+    color:white;
+    border: none;
+    border-radius: 7px;
+    padding:0.3rem 0.5rem;
+}
+.countingbox{
+  width: 60%;
+  margin: auto;
+  display: flex;
+
+}
+.countingbox>button{
+  background-color: #2196f3;
+  color:white;
+  width: 35px;
+  height:35px;
+  border-radius: 5px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.disablecartbtn{
+    visibility: hidden;
+}
+.mrpname>span:last-child{
+    text-decoration: line-through;
+    margin-left: 1px;
+    font-size: 0.8rem;
+}
+.mrpname>span:first-child{
+    font-size: 0.8rem;
+}
