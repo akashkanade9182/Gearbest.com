@@ -6,6 +6,7 @@ import Qrcode from './Qrcode'
 import Searchbar from './Searchbar'
 import Sign from './Sign'
 import MenuButtons from "./MenuButton"
+import "../../styles/Navbar.css"
 
 
 
@@ -46,10 +47,11 @@ const Navbar = () => {
 {/* \*************************second Navbar***********************\ */}
 
         <Box w="100%" h={["auto","auto","auto", "60%"]} display={"flex"} flexDirection={["column-reverse","column-reverse","row","row"]} justifyContent="space-around" alignItems={"center"}>
-        <Box w="250px" h="80px" mt={["15px","15px","0","0"]}>
+        <Box w="250px" className="logobox" h="60px" mt={["15px","15px","0","0"]}>
         <img style={{width:"100%",height:"100%"}}
               onClick={handleNavigate}
-              src="https://iili.io/HxEXlrx.md.jpg"
+             
+              src="Geekbuying.jpg"
               alt="HoY8CYb.md.jpg"
             />
         </Box>

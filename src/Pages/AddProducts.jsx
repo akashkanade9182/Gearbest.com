@@ -94,6 +94,7 @@ dispatch(addNewProducts(data))
                 <option value="computer">computer</option>
                 <option value="laptop">laptop</option>
                 <option value="manClothes">Mans clothes</option>
+                <option value="homepage">homepage</option>
                 
               </Select>
               <Button onClick={handleClick} w="100%" m="auto" mt="20px" bgColor={"#2196f9"} color="white">Add</Button>

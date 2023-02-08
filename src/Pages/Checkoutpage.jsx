@@ -8,6 +8,7 @@ import {
     AlertTitle,
     AlertDescription,Stack
   } from '@chakra-ui/react'
+import { useSelector } from "react-redux";
 
 
 
@@ -15,12 +16,26 @@ import {
 
 
 const Checkoutpage = () => {
-  const toast = useToast();
+  const toast = useToast({
+    position: 'top',
+    title: 'Your Product is start to deliver',
+  });
   const [username, setUsername] = useState("");
   const [email, setEmail] = useState("");
   const navigate = useNavigate();
   const shift=useNavigate();
+  const data=useSelector(store=>store.AuthReducer.data);
 
+  const handleClick=()=>{
+    toast({
+      title: 'Checkout successfull.',
+      description: "your poduct is start to deliver",
+      status: 'success',
+      duration: 9000,
+      isClosable: true,
+    })
+    navigate("/")
+  }
 
 
 
@@ -44,12 +59,13 @@ const Checkoutpage = () => {
                 borderRadius: "10px",
               }}
             >
-              <div>
+              <div style={{display:"flex",justifyContent:"space-around",alignItems:"center"}}>
                 <img
                   style={{ margin: "10px", width: "50px" }}
                   src="https://www.netmeds.com/msassets/images/icons/profile-icon.svg"
                   alt=""
                 />
+                {data.name}
               </div>
               <div>
                 <Heading size="lg">{username}</Heading>
@@ -144,7 +160,7 @@ const Checkoutpage = () => {
                   LOGIN INFORMATION
                 </Heading>
                 <Heading margin="5px" color="#24aeb1" as="h6" size="sm">
-                  EMAIL
+                  EMAIL:- {data.email}
                 </Heading>
                 <Heading margin="5px" as="h6" size="xs">
                   {email}
@@ -153,7 +169,7 @@ const Checkoutpage = () => {
                   MOBILE NUMBER
                 </Heading>
                 <Heading as="h6" size="xs">
-                  {"+91 9900111222"}
+                  {data.mobile}
                 </Heading>
               </div>
               <div>
@@ -164,7 +180,7 @@ const Checkoutpage = () => {
                   FULL NAME
                 </Heading>
                 <Heading margin="5px" as="h6" size="xs">
-                  {username}
+                  {data.name}
                 </Heading>
                 <Heading margin="5px" color="#24aeb1" as="h6" size="sm">
                   GENDER
@@ -187,6 +203,9 @@ const Checkoutpage = () => {
 
                 marginTop: "5%",
               }}
+              onClick={() =>
+              handleClick()
+              }
             >
               Checkout
             </Button>
