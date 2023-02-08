@@ -5,6 +5,7 @@ import * as types from "./actionTypes"
 const initialState = {
   isAuth: false,
   token: "",
+  data:{},
   isLoading: false,
   isError: false,
   usertype:""
@@ -26,7 +27,7 @@ const reducer = (state = initialState,action) => {
           isLoading:false,
           isAuth:true,
           token:payload.token,
-          usertype:payload.usertype,
+          data:payload.user,
           isError:false
 
         };
@@ -35,7 +36,8 @@ const reducer = (state = initialState,action) => {
             isAuth:false,
             isLoading:false,
             isError:true,
-            token:""
+            token:"",
+            data:{}
           }
     default:return state;
   }

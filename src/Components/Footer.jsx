@@ -8,7 +8,7 @@ import {BsFacebook,BsYoutube,BsPinterest,BsMessenger,BsInstagram,BsTwitter,} fro
 
 const Footer = () => {
   return (
- <Box display={"flex"} w="100%" className='footerbox' h="auto" bgColor={"#f1f6fd"}  position="relative" flexDirection="column">
+ <Box display={"flex"} w="100%" mt="30px" className='footerbox' h="auto" bgColor={"#f1f6fd"}  position="relative" flexDirection="column">
     <Box w="100%" h="80px"  textAlign={"center"} display="flex" alignItems={"center"}  justifyContent="center" fontSize={"25px"}>
     <a href="/">Why buy from geekbuying?</a><p>+</p>
     </Box>

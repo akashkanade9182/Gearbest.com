@@ -7,6 +7,12 @@ import Footer from '../Components/Footer'
 import Navbar from '../Components/Navbar/Navbar'
 import { getData } from '../Redux/AppReducer/action'
 
+
+
+
+;
+
+
 const TotalPrice=(cartItem,setTotalPrice,setTotalMrp,setDis)=>{
   let totalp=0;
   let totalm=0;
@@ -32,6 +38,7 @@ const Cartpage = () => {
   const location=useLocation();
   const navigate=useNavigate();
   const cartItem=products.filter((item)=>item.quantity>0)
+  const [showButton, setShowButton] = useState(false);
 
 
   const handleAddProduct=(id,quantity,price,MRP)=>{
@@ -82,6 +89,25 @@ const handleScroll=()=>{
 }
 
 
+useEffect(() => {
+  const handleScroll = () => {
+    if (window.pageYOffset > 200) {
+      setShowButton(true);
+    } else {
+      setShowButton(false);
+    }
+  };
+  window.addEventListener("scroll", handleScroll);
+  return () => {
+    window.removeEventListener("scroll", handleScroll);
+  };
+}, []);
+
+const handleClick = () => {
+  window.scrollTo({ top: 0, behavior: "smooth" });
+}
+
+
   return (
     <div className='cart'>
       <Navbar/>
@@ -103,9 +129,9 @@ const handleScroll=()=>{
                 <div>
                   <img src={item.image} alt="err" />
                   <div className='countingbox'>
-                  <button onClick={()=>handleAddProduct(item._id,item.quantity)}>+</button>
+                  <button style={{backgroundColor:"#2196f9"}} onClick={()=>handleAddProduct(item._id,item.quantity)}>+</button>
                    <div>{item.quantity}</div>
-                 <button onClick={()=>handleRemoveProduct(item._id,item.quantity)}>-</button>
+                 <button style={{backgroundColor:"#2196f9"}} onClick={()=>handleRemoveProduct(item._id,item.quantity)}>-</button>
                   </div>
                 </div>
 
@@ -155,24 +181,19 @@ const handleScroll=()=>{
         </div>
 
       </div>
-      {/* <button style={{
-        border: "none",
-        width: "150px",
-        display:"flex",
-        alignItems:"center",
-        backgroundColor: "black",
-        color: "white",
-        borderRadius: "9px",
-        margin: "auto",
-        padding: "5px 10px",
-        marginTop: "20px"
-      }}
-      onClick={handleScroll}>
-        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-arrow-big-top" width="36" height="36" viewBox="0 0 24 24" stroke-width="2" stroke="#ffffff" fill="none" stroke-linecap="round" stroke-linejoin="round">
-          <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-          <path d="M9 20v-8h-3.586a1 1 0 0 1 -.707 -1.707l6.586 -6.586a1 1 0 0 1 1.414 0l6.586 6.586a1 1 0 0 1 -.707 1.707h-3.586v8a1 1 0 0 1 -1 1h-4a1 1 0 0 1 -1 -1z" />
-        </svg>Scroll to Top</button> */}
+   
       <Footer/>
+      <button
+      className={`scroll-to-top-button ${showButton ? "show-scroll-to-top-button" : ""}`}
+      onClick={handleClick}
+    >
+      <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-arrow-narrow-up" width="44" height="44" viewBox="0 0 24 24" stroke-width="3" stroke="#ffffff" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <line x1="12" y1="5" x2="12" y2="19" />
+  <line x1="16" y1="9" x2="12" y2="5" />
+  <line x1="8" y1="9" x2="12" y2="5" />
+</svg>
+    </button>
     
       
     </div>

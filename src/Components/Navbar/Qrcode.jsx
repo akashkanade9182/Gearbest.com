@@ -32,9 +32,9 @@ const Qrcode = () => {
         closeOnBlur={false}
       >
        
-        <PopoverContent  w="400px" h="200px" left="30rem" top="45px" display={["none","none","none","flex"]}>
-        <Heading as={'h4'} size="sm">Download App!</Heading>
-                <Text>Save $3 with App & New User Only</Text>
+        <PopoverContent  w="400px" h="200px" left="45rem" top="45px" display={["none","none","none","flex"]}>
+        <Heading as={'h4'}  textAlign={"center"} size="sm">Download App!</Heading>
+                <Text textAlign={"center"}>Save $3 with App & New User Only</Text>
                 <Flex w="100%" justifyContent={"space-around"}>
                     <Image textAlign={'justify'} marginTop='15px' width='100px' src='https://imgs.search.brave.com/sQAGynG7zniztT33LJ-nymnJ8RdOzZpOd_TIG1JOGtw/rs:fit:1200:1200:1/g:ce/aHR0cHM6Ly9wbmdp/bWcuY29tL3VwbG9h/ZHMvcXJfY29kZS9x/cl9jb2RlX1BORzYu/cG5n'></Image>
                     <Image textAlign={'justify'} marginTop='15px' width='150px' src="https://imgs.search.brave.com/1keJVoMCBk8TDk4PiQO0umNta3-XPrMg4qs4f1j-tR0/rs:fit:1200:989:1/g:ce/aHR0cHM6Ly92ZWN0/b3JpZmllZC5jb20v/aW1hZ2VzL2FwcC1z/dG9yZS1nb29nbGUt/cGxheS1pY29uLTM5/LnBuZw"></Image>

@@ -19,15 +19,7 @@ const Navbar = () => {
     navigate("/");
   };
 
-  const handleSearch=()=>{
 
-  }
-  const handleFavorite=()=>{
-
-  }
-  const handleCart=()=>{
-
-  }
 
 
   return (
@@ -77,14 +69,14 @@ const Navbar = () => {
 
         <Box w={["100%","100%","auto","auto"]} display={"flex"} justifyContent="space-around" alignItems={"center"} >
           <Sign/>
-          <Button onClick={handleFavorite} bg="transparent" color={"white"} >
+          <Button onClick={()=>navigate("/favirote")} bg="transparent" color={"white"} >
            
             <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-heart" width="28" height="28" viewBox="0 0 24 24" stroke-width="2.5" stroke="#ffffff" fill="none" stroke-linecap="round" stroke-linejoin="round">
   <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
   <path d="M19.5 13.572l-7.5 7.428l-7.5 -7.428m0 0a5 5 0 1 1 7.5 -6.566a5 5 0 1 1 7.5 6.572" />
 </svg> Favorites
             </Button>
-            <Button onClick={handleCart} bg="transparent" color={"white"} >
+            <Button onClick={()=>navigate("/cart")} bg="transparent" color={"white"} >
             <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-shopping-cart" width="28" height="28" viewBox="0 0 24 24" stroke-width="2.5" stroke="#ffffff" fill="none" stroke-linecap="round" stroke-linejoin="round">
   <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
   <circle cx="6" cy="19" r="2" />

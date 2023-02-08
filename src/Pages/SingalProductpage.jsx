@@ -24,6 +24,8 @@ import Navbar from "../Components/Navbar/Navbar";
 import { useDispatch, useSelector } from "react-redux";
 import { EditCart, EditSingleCart, getOneProduct } from "../Redux/AppReducer/action";
 import Footer from "../Components/Footer";
+import "../styles/Hompage.css"
+
 const SingleProductpage = () => {
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(false);
@@ -33,6 +35,7 @@ const SingleProductpage = () => {
   const navigate=useNavigate();
   const data=useSelector(store=>store.AppReducer.data);
   const isLoading=useSelector(store=>store.AppReducer.isLoading);
+  const [showButton, setShowButton] = useState(false);
 
 
 const handleAddtoCart=(id,quantity)=>{
@@ -56,6 +59,25 @@ const handleAddtoCart=(id,quantity)=>{
  
     dispatch(getOneProduct(id));
   }, [id]);
+
+
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.pageYOffset > 200) {
+        setShowButton(true);
+      } else {
+        setShowButton(false);
+      }
+    };
+    window.addEventListener("scroll", handleScroll);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
+  const handleClick = () => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  };
 
 
 
@@ -423,6 +445,17 @@ const handleAddtoCart=(id,quantity)=>{
         </Box>
       </Box>
     <Footer/>
+    <button
+      className={`scroll-to-top-button ${showButton ? "show-scroll-to-top-button" : ""}`}
+      onClick={handleClick}
+    >
+      <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-arrow-narrow-up" width="44" height="44" viewBox="0 0 24 24" stroke-width="3" stroke="#ffffff" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <line x1="12" y1="5" x2="12" y2="19" />
+  <line x1="16" y1="9" x2="12" y2="5" />
+  <line x1="8" y1="9" x2="12" y2="5" />
+</svg>
+    </button>
     </Box>
     </>
   );

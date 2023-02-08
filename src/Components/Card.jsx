@@ -76,9 +76,9 @@ const handleF=(_id,favorite)=>{
     
 {
   quantity===0 ? <button  className={`addcartbtn`} onClick={()=>Click(_id)}>Add To Card</button>:<div className='countingbox'>
-  <button onClick={()=>Clickadd(_id,quantity)}>+</button>
+  <button style={{backgroundColor:"#2196f9"}} onClick={()=>Clickadd(_id,quantity)}>+</button>
    <div className='quantbox'>{quantity}</div>
- <button onClick={()=>Clickremove(_id,quantity)}>-</button>
+ <button  style={{backgroundColor:"#2196f9"}} onClick={()=>Clickremove(_id,quantity)}>-</button>
   </div>
 
 

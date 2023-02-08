@@ -12,7 +12,7 @@ import Card from '../Components/Card'
 import Sidebar from '../Components/Productpage/Sidebar'
 import Loader from '../Components/Productpage/Loader'
 import "../styles/Productpage.css"
-
+import "../styles/Hompage.css"
 
 
 
@@ -33,6 +33,7 @@ const Productpage = () => {
     const isLoading = useSelector(store => store.AppReducer.isLoading)
     const catarray = ['Noice', 'firebolt', 'boat', 'Apple', 'hammer', 'Agrawal', 'Aroma', 'Ayur', 'Alyuva', 'Atulya']
     const countarray = [3, 5, 3, 1, 1, 1, 1, 1, 1, 1]
+    const [showButton, setShowButton] = useState(false);
 
 
     const hadleAddtoCart = (id) => {
@@ -84,7 +85,9 @@ const Productpage = () => {
     
         // setCount(prev=>prev+1)
       }
-    
+      const handleClick = () => {
+        window.scrollTo({ top: 0, behavior: "smooth" });
+      };
     
     
       const handleRemoveProduct = (id, quantity) => {
@@ -192,7 +195,25 @@ const Productpage = () => {
         }
     
         dispatch(getData(queryparams))
-    },[searchParams,dispatch,range])
+    },[searchParams,dispatch,range,location.search])
+
+
+    
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.pageYOffset > 200) {
+        setShowButton(true);
+      } else {
+        setShowButton(false);
+      }
+    };
+    window.addEventListener("scroll", handleScroll);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
+
   return (
     <>
     <Navbar />
@@ -242,7 +263,19 @@ const Productpage = () => {
 
    
     </Box>
+   
     <Footer/>
+    <button
+      className={`scroll-to-top-button ${showButton ? "show-scroll-to-top-button" : ""}`}
+      onClick={handleClick}
+    >
+      <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-arrow-narrow-up" width="44" height="44" viewBox="0 0 24 24" stroke-width="3" stroke="#ffffff" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <line x1="12" y1="5" x2="12" y2="19" />
+  <line x1="16" y1="9" x2="12" y2="5" />
+  <line x1="8" y1="9" x2="12" y2="5" />
+</svg>
+    </button>
     </>
   )
 }

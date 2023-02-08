@@ -34,7 +34,7 @@ const Searchbar = ()=> {
     }
     const handleClick=(id)=>{
         setSuggestions([])
-        navigate(`/singleproduct/${id}`)
+        navigate(`/${id}`)
     }
 
 
@@ -61,7 +61,7 @@ const handleClose=()=>{
                     <img  style={{width:"100%",height:"100%"}}src={item.image} alt="err" />
               
                 </Box>
-                <Box ml="20px" >
+                <Box ml="25px"  textAlign={"left"}>
                         {item.title}
 
                     </Box>

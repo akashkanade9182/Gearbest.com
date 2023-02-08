@@ -13,6 +13,7 @@ import {
   useDisclosure
   } from '@chakra-ui/react'
   import axios from "axios"
+import { useSelector } from 'react-redux'
 
 
   
@@ -20,11 +21,18 @@ import {
 
 const Sign = () => {
   const [name,setName]=useState("Sign in")
+  const data=useSelector(store=>store.AuthReducer.data)
 
 
     const { isOpen, onToggle, onClose } = useDisclosure()
 
-
+useEffect(()=>{
+  if(data.name){
+setName(data.name)
+  }else{
+    setName("Signin")
+  }
+},[data])
 
 
   return (
@@ -36,6 +44,7 @@ const Sign = () => {
 </svg>
                         {name}
     </Button>
+  
     <Popover
       returnFocusOnClose={false}
       isOpen={isOpen}
@@ -47,7 +56,7 @@ const Sign = () => {
       <PopoverContent  w={["200px","200px","264px","264px"]} h="86px" left={["2rem","11rem","35em","57rem"]} top={[ "80px","80px","103px","103px"]} display="flex" alignItems={"center"}>
    
               <Flex w="100%" justifyContent={"space-around"}>
-         <Link to="/admin"  ><Button bg="#1565c0" color="white" mt="20px">Admin</Button></Link>
+         <Link to="/adminlogin"  ><Button bg="#1565c0" color="white" mt="20px">Admin</Button></Link>
            <Link to ="/login"  > <Button bg="#1565c0" color="white" mt="20px">User</Button></Link>
 
               </Flex>
