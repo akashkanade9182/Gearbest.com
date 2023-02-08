@@ -1,0 +1,20 @@
+{
+  "files": {
+    "main.css": "/Geekbuying.com/static/css/main.af36546c.css",
+    "main.js": "/Geekbuying.com/static/js/main.b6f30c10.js",
+    "static/js/787.d62d1c65.chunk.js": "/Geekbuying.com/static/js/787.d62d1c65.chunk.js",
+    "static/media/logo.svg": "/Geekbuying.com/static/media/logo.6ce24c58023cc2f8fd88fe9d219db6c6.svg",
+    "static/media/slick.svg": "/Geekbuying.com/static/media/slick.2630a3e3eab21c607e21.svg",
+    "static/media/slick.eot": "/Geekbuying.com/static/media/slick.a4e97f5a2a64f0ab1323.eot",
+    "static/media/slick.ttf": "/Geekbuying.com/static/media/slick.c94f7671dcc99dce43e2.ttf",
+    "static/media/slick.woff": "/Geekbuying.com/static/media/slick.295183786cd8a1389865.woff",
+    "index.html": "/Geekbuying.com/index.html",
+    "main.af36546c.css.map": "/Geekbuying.com/static/css/main.af36546c.css.map",
+    "main.b6f30c10.js.map": "/Geekbuying.com/static/js/main.b6f30c10.js.map",
+    "787.d62d1c65.chunk.js.map": "/Geekbuying.com/static/js/787.d62d1c65.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.af36546c.css",
+    "static/js/main.b6f30c10.js"
+  ]
+}
