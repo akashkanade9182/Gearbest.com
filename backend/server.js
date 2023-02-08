@@ -3,8 +3,6 @@ const cors = require("cors")
 
 
 const connection=require("./config/db")
-const TodoRouter=require("./routes/Todo.Route")
-const NoteRouter=require("./routes/Notes.Route");
 const geekRouter=require("./routes/geekbuying.route")
 const  userRouter=require("./routes/user.route")
 
@@ -15,8 +13,7 @@ app.use(cors({
 }))
 
 
-app.use("/netmed",TodoRouter);
-app.use("/notes",NoteRouter);
+
 app.use("/geekbuying",geekRouter);
 app.use("/user",userRouter);
 
