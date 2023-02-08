@@ -1,0 +1,122 @@
+.sidebar{
+    width: 20% ;
+    
+
+  
+    /* border: 3px solid darkred; */
+}
+.categoryFbox{
+   
+   width: 95%;
+   margin: auto;
+   height: 300px;
+   overflow: scroll;
+   scroll-behavior: smooth;
+    background-color: white;
+    
+    /* border:1px solid red; */
+    border-radius: 7px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+.categoryFbox::-webkit-scrollbar{
+    display:none;
+}
+.categoryFbox>h1{
+    width: 95%;
+    font-size: 1.5rem;
+    font-weight: bold;
+    height: fit-content;
+}
+.trainbox{
+    height:40px;
+    text-align: left;
+   border-bottom:1px solid black;
+    align-items: center;
+    padding:10px 10px;
+}
+.categoryFbox>div{
+    width: 90%;
+    margin:auto;
+    height:2rem;
+    border-bottom: 1px solid;
+}
+.selection{
+    border:none;
+    width: 100%;
+    height: 50px;
+    border-bottom: 1px solid;
+    background-color: white;
+}
+.brandbox{
+    width: 95%;
+    margin:auto;
+    height:fit-content;
+   
+    
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    padding:1rem 1rem;
+    background-color: white;
+
+}
+.brandbox>h1{
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+.brandinputbox{
+    width: 100%;
+    border-bottom: 1px solid;
+    display: flex;
+    margin-top: 0.2rem;
+    justify-content: flex-start;
+
+
+}
+.brandinputbox>label{
+    margin-left: 0.4rem;
+}
+.featuresbox{
+    width: 95%;
+    margin:auto;
+    height:fit-content;
+    padding:10px 10px;
+   
+    margin-top: 1rem;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+.featuresbox>h1{
+    font-size: 1.5rem;
+    font-weight: bold;
+
+}
+.featuresbox>div{
+    
+    display: flex;
+    flex-direction: column;
+    height:15rem;
+    justify-content: space-around;
+  
+    
+}
+.featuresbox>div>button{
+    border-radius: 10px;
+    height:50px;
+    background-color: transparent;
+    box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
+}
+.featuresbox>div>div{
+   width: 100%;
+}
+.featuresbox>div>div>label{
+    font-size: 0.9rem;
+    font-weight: bold;
+    color :grey
+}
+.categoryFbox>h1{
+    border:none;
+}
+.sidebar>h1{
+    border:none;
+}

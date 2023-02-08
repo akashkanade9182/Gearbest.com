@@ -1,0 +1,9 @@
+.sliderow{
+    width:24% ;
+    height:400px;
+ background-color:black;
+}
+.sliderow>img{
+    height: 100%;
+    width: 100%;
+}

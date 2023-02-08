@@ -1,0 +1,215 @@
+.cart{
+    width: 100%;
+    /* border:1px solid red; */
+    text-align: left;
+}
+.cartbox>h1{
+    font-size: 1.5rem;
+    font-weight: bold;
+    align-self: left;
+    margin-left: 154px;
+}
+.cartbox>div{
+    width: 85%;
+    margin :auto;
+    display:flex;
+    justify-content: space-around;
+    /* border:1px solid green; */
+}
+.cartproductsbox{
+width: 65%;
+/* border:1px solid red; */
+
+}
+.cartproductsbox>h4{
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: rgba(21,27,57,.6);
+    align-self: left;
+    margin-left: 46px;
+}
+.pricesbox{
+    width: 30%;
+    /* border:1px solid blueviolet  */
+}
+.productcard{
+    width: 90%;
+    margin:auto;
+    height:fit-content;
+    margin-top: 15px;
+    background-color: white;
+    display:flex;
+    padding:15px 15px;
+    border-radius: 10px;
+    justify-content: space-around;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    /* border:1px solid yellow; */
+}
+
+.productcard>div:first-child{
+    width: 70%;
+    line-height: 2;
+    /* border:1px solid teal; */
+    text-align: left;
+    padding:15px 15px;
+}
+
+.productcard>div:last-child{
+    width: 50%;
+    line-height: 2;
+    /* border:1px solid teal; */
+    text-align: left;
+}
+.productcard>div:first-child>h1{
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: rgba(21,27,57,.6);
+
+}
+.productcard>div:first-child>p{
+    margin-top: 20px;
+    font-style: oblique;
+}
+.productcard>div:first-child>h2{
+    margin-top: 20px;
+}
+.productcard>div:first-child>h2>span:first-child{
+color: #ec407a;
+font-weight: bold;
+font-size: 1rem;
+}
+.productcard>div:first-child>h2>span:last-child{
+    font-weight: bold;
+    font-size: 1rem;
+    margin-left: 20px;
+    text-decoration: line-through;
+    }
+    .productcard>div:first-child>h4{
+        margin-top: 20px;
+        }
+.productcard>div:last-child>img{
+    width: 50%;
+    align-self: right;
+    margin-left: 50%;
+   
+   }
+.productcard>div:last-child>img{
+ width: 50%;
+ align-self: right;
+ margin-left: 50%;
+
+}
+.countingbox{
+    width:60%;
+    display: flex;
+    margin-left: 40%;
+    margin-top: 20px;
+    justify-content: space-around;
+    align-items: center;
+    /* border: 1px solid pink; */
+}
+.countingbox>button{
+   height:35px;
+   width: 50px;
+   color:white;
+  
+   border-radius: 10px;
+   background-color: #32aeb1;
+}
+.promocodebox{
+    width: 100%;
+    margin: auto;
+    background-color: white;
+    border-radius: 10px;
+    text-align: center;
+    margin-top: 15px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+
+
+}
+.promocodebox>div{
+    width: 40%;
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-around;
+    text-align: left;
+}
+.promocodebox>div>button{
+   border: 1px solid rgba(21,27,57,.6);
+   height:20px ;
+   width:20px;
+   border-radius: 10px;
+}
+.promocodebox>p>span{
+    font-size: 0.7rem;
+}
+.promocodebox>h1{
+    font-weight: bold;
+}
+
+
+
+
+
+/******************pricedetails******************************************/
+
+.totalpricebox{
+    width: 100%;
+    margin: auto;
+    background-color: white;
+    border-radius: 10px;
+    text-align: center;
+    margin-top: 15px;
+    padding: 15px 15px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+.totalpricebox>h1{
+    font-weight: bold;
+}
+.calculatebox>div{
+    width: 90%;
+    display: flex;
+    justify-content: space-between;
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-top: 15px;
+
+}
+.calculatebox>div:last-child>span{
+    
+
+    font-weight: bold;
+
+}
+.totalsave{
+    width: 85%;
+    background-color: #eceff1;
+    color:#378f30 ;
+    margin: auto;
+    margin-top: 15px;
+
+}
+
+.finalprice{
+    width: 90%;
+    margin:auto;
+    display: flex;
+    margin-top: 15px;
+    justify-content: space-around;
+}
+.finalprice>button{
+   height:40px;
+   padding:5px 15px;
+   border-radius: 10px;
+   width: fit-content;
+   background-color: #2196f3;
+   color:white
+}.finalprice>div>p{
+  font-size: 0.7rem;
+  font-weight: bold;
+  color:rgba(21,27,57,.6);
+}
+.finalprice>div>h1{
+    font-weight: bold;
+    font-size: 1.1rem;
+}
