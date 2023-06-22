@@ -217,14 +217,14 @@ const Productpage = () => {
   return (
     <>
     <Navbar />
-    <Box display="flex" marginBottom="20px" justifyContent={"space-between"} w="98%" m="auto" mt="15px" className='categorypage'>
+    <Box display="flex" marginBottom="20px" justifyContent={"space-between"} alignItems={"flex-start"} w="98%" m="auto" mt="15px" className='categorypage'>
 
       
       
 
   
         <Sidebar props={{ setBrand, setRange, minvalue, maxvalue, catarray, countarray, setSort }} />
-        <Box w={["90%","100%","79%","79%"]} m="auto" className='productsbox'>
+        <Box w={["90%","100%","79%","79%"]}  m="auto" className='productsbox'>
 
           <div className='categoryimagebox'>
             <img src="https://img.gkbcdn.com/bn/2212/5-63ac10cc2b40c966cc189a8e._p1_.jpg" alt="" />

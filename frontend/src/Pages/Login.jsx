@@ -29,14 +29,7 @@ const Login = () => {
            email,password
         }
 
-        dispatch(getLogin(data)).then(()=>{
-            const comingfrom=location.state.from
-            if(comingfrom){
-                navigate(comingfrom)
-            }else{
-                navigate("/")
-            }
-        })
+        dispatch(getLogin(data,navigate))
         
     }
 
