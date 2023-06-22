@@ -2,7 +2,7 @@
 # Project :-Geekbuying.com(Clone)
 
 it is a clone of ecommerce website geeksbuing.com. her you can buy products from any corner of world.
-https://geekybuyingcom.netlify.app/
+https://akashkanade9182-geekbuying.netlify.app
 
 # Individual Project
 
