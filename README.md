@@ -4,6 +4,11 @@
 it is a clone of ecommerce website geeksbuing.com. her you can buy products from any corner of world.
 https://geekbuying-com.vercel.app/
 
+## Admin login:-
+- email :-akash@geek.com
+- password :- akash1995
+
+
 # Individual Project
 
 
